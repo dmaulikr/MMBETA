@@ -11,7 +11,7 @@ import Foundation
 
 protocol CellInfoDelegate {
     //theLocation: String
-    func init()
+    //func init()
     
 }
 
@@ -29,10 +29,11 @@ class ResultCell: UITableViewCell {
 
     //request data to pass in?
 //02-March-2016
-    if delegate = self.delegate {
-    delegate
+    //if delegate = self.delegate {
+    
+    
     }
     
 
     
-}
+

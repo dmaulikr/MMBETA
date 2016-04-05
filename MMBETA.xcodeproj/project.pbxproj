@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		24C61E637349C6859652CB57 /* Pods_MMBETA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 107434D7094922566346E809 /* Pods_MMBETA.framework */; };
 		31166B6299D86DA4AAF67D4A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC4002A690D4DD8C0FC8B0A /* Pods.framework */; };
-		9F1755811B9D31C10091A46B /* coffee_details.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1755801B9D31C10091A46B /* coffee_details.swift */; };
+		9F1755811B9D31C10091A46B /* nightclub_details.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1755801B9D31C10091A46B /* nightclub_details.swift */; };
 		9F5329F71B96BE93005462BA /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5329F61B96BE93005462BA /* Search.swift */; };
 		9F5329FA1B96D07B005462BA /* ResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5329F91B96D07B005462BA /* ResultCell.swift */; };
 		9F6302001C72DDAB0089FE4E /* SetLocationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6301FF1C72DDAA0089FE4E /* SetLocationName.swift */; };
@@ -41,7 +41,7 @@
 		107434D7094922566346E809 /* Pods_MMBETA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MMBETA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		197F266EC8B0808661A4014A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		1AC4002A690D4DD8C0FC8B0A /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9F1755801B9D31C10091A46B /* coffee_details.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = coffee_details.swift; sourceTree = "<group>"; };
+		9F1755801B9D31C10091A46B /* nightclub_details.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nightclub_details.swift; sourceTree = "<group>"; };
 		9F5329F61B96BE93005462BA /* Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		9F5329F91B96D07B005462BA /* ResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultCell.swift; sourceTree = "<group>"; };
 		9F6301FF1C72DDAA0089FE4E /* SetLocationName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetLocationName.swift; sourceTree = "<group>"; };
@@ -107,7 +107,7 @@
 		9F17557F1B9D31040091A46B /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				9F1755801B9D31C10091A46B /* coffee_details.swift */,
+				9F1755801B9D31C10091A46B /* nightclub_details.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -359,7 +359,7 @@
 				9F72C5311B8FF7EB0015C348 /* Trending.swift in Sources */,
 				9F7F2E0F1BA51F5E00B74349 /* AboutMe.swift in Sources */,
 				9F7B15CD1B917A3B00592AFC /* MunchieSignUp.swift in Sources */,
-				9F1755811B9D31C10091A46B /* coffee_details.swift in Sources */,
+				9F1755811B9D31C10091A46B /* nightclub_details.swift in Sources */,
 				9F5329FA1B96D07B005462BA /* ResultCell.swift in Sources */,
 				9F72C52D1B8FF7EB0015C348 /* AppDelegate.swift in Sources */,
 				9F72C52F1B8FF7EB0015C348 /* Home.swift in Sources */,

@@ -46,7 +46,7 @@ class Search: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-    var results: [coffee_details]! = []
+    var results: [nightclub_details]! = []
     
     let delegateService = CellInfoDelegate?.self
     
@@ -54,12 +54,11 @@ class Search: UIViewController, UITableViewDelegate, UITableViewDataSource {
         super.viewDidLoad()
         let startTime = NSDate()
 
-        delegateService.delegate = self
+        //delegateService.delegate = self
         //
         
         
         self.tableView.reloadData()
-
         
     }
     
@@ -107,7 +106,7 @@ class Search: UIViewController, UITableViewDelegate, UITableViewDataSource {
         //REST API Requests
         //Asynchronous
         //
-        backendless.persistenceService.of(coffee_details.ofClass()).find(
+        backendless.persistenceService.of(nightclub_details.ofClass()).find(
             BackendlessDataQuery(), response: { (results: BackendlessCollection!) -> () in
                 let currentPage = results.getCurrentPage()
                 

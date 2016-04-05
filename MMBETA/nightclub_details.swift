@@ -8,7 +8,7 @@
 
 import Foundation
 
-class coffee_details: NSObject {
+class nightclub_details: NSObject {
     var name : String?
     var objectId : String?
     //var telephone : String?

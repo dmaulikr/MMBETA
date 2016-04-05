@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -246,16 +246,10 @@
                                         <rect key="frame" x="0.0" y="66" width="375" height="97"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CP9-QN-k7z" id="bZg-PQ-me3">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="96.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0.5 miles away" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eIj-ev-F5X">
-                                                    <rect key="frame" x="255" y="8" width="112" height="20"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Location Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YE8-BN-WLs">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Location Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YE8-BN-WLs">
                                                     <rect key="frame" x="8" y="8" width="107" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -264,13 +258,8 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="YE8-BN-WLs" firstAttribute="top" secondItem="bZg-PQ-me3" secondAttribute="topMargin" id="6Z8-sf-ZbK"/>
-                                                <constraint firstItem="eIj-ev-F5X" firstAttribute="leading" secondItem="YE8-BN-WLs" secondAttribute="trailing" constant="143" id="7uN-vX-2TB"/>
-                                                <constraint firstItem="eIj-ev-F5X" firstAttribute="trailing" secondItem="bZg-PQ-me3" secondAttribute="trailingMargin" id="Ole-QM-uKw"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="YE8-BN-WLs" secondAttribute="bottom" constant="60" id="Rgz-mk-ucf"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="eIj-ev-F5X" secondAttribute="bottom" constant="60" id="WKy-mr-IBc"/>
                                                 <constraint firstItem="YE8-BN-WLs" firstAttribute="leading" secondItem="bZg-PQ-me3" secondAttribute="leadingMargin" id="beD-DA-sdo"/>
-                                                <constraint firstItem="eIj-ev-F5X" firstAttribute="leading" secondItem="YE8-BN-WLs" secondAttribute="trailing" constant="140" id="lGO-Gv-Nok"/>
-                                                <constraint firstItem="eIj-ev-F5X" firstAttribute="top" secondItem="bZg-PQ-me3" secondAttribute="topMargin" id="wj9-6Z-XaV"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -279,19 +268,12 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="bZg-PQ-me3" id="YxR-eu-op8"/>
-                                    <outlet property="delegate" destination="bZg-PQ-me3" id="xNL-71-It8"/>
-                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" id="cbH-4J-Ahh"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="tableView" destination="zWT-Rd-kEW" id="Gpc-xL-faV"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bAB-Eo-ChN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
