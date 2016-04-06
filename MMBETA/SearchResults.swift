@@ -7,7 +7,7 @@
 //
 import UIKit
 
-class SearchResults: UITableViewController{ 
+class SearchResults: UITableViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()

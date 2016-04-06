@@ -503,7 +503,7 @@
             </objects>
             <point key="canvasLocation" x="-138.5" y="870.5"/>
         </scene>
-        <!--Search Results-->
+        <!--Search-->
         <scene sceneID="7VZ-KD-hEF">
             <objects>
                 <tableViewController id="Ipb-50-lG0" customClass="SearchResults" customModule="MMBETA" customModuleProvider="target" sceneMemberID="viewController">
@@ -526,16 +526,17 @@
                             <outlet property="delegate" destination="Ipb-50-lG0" id="2iA-1g-Ncx"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Search" id="UZw-M6-6pC"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Ie-Zu-01w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="404.5" y="385.5"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Search-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                <tabBarController title="Search" id="49e-Tb-3d3" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="ewa-rs-QrD"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
@@ -547,6 +548,7 @@
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="tlS-Q3-TGr" kind="relationship" relationship="viewControllers" id="X2Q-cy-ctn"/>
+                        <segue destination="Ipb-50-lG0" kind="relationship" relationship="viewControllers" id="f2g-zs-p3t"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
