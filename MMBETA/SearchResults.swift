@@ -11,7 +11,15 @@ class SearchResults: UITableViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        //expensive array, will store search results from backendless collection REST API requests
+        var resultArray = [String]()
+        
+        
+        
+        
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -29,7 +37,7 @@ class SearchResults: UITableViewController{
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        
+        return
     }
 
 
