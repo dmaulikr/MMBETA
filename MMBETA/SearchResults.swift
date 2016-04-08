@@ -9,11 +9,15 @@ import UIKit
 
 class SearchResults: UITableViewController{
     
+    
+    //expensive array, will store search results from backendless collection REST API requests
+    //Global declaration for usability in tableView function
+    var resultArray = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //expensive array, will store search results from backendless collection REST API requests
-        var resultArray = [String]()
+        
         
         
         
@@ -37,7 +41,8 @@ class SearchResults: UITableViewController{
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return
+        //will return number of items stored in ResultArray
+        return resultArray.count
     }
 
 
