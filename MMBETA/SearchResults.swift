@@ -8,6 +8,8 @@
 import UIKit
 
 class SearchResults: UITableViewController{
+    //Creates Backendless instance
+    var backendless = Backendless.sharedInstance()
     
     
     //expensive array, will store search results from backendless collection REST API requests
@@ -16,8 +18,10 @@ class SearchResults: UITableViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
+        //initializes backendless connection to BaaS
+        //uses globally declared constants APP_ID, SECRET_KEY, & VERSION_NUM
+        //Note: refactor line for improved object oriented methodologies
+        backendless.initApp(APP_ID, secret:SECRET_KEY, version:VERSION_NUM)
         
         
         
