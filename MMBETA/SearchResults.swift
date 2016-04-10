@@ -45,7 +45,31 @@ class SearchResults: UITableViewController{
         return resultArray.count
     }
 
-
+    func fetchingFirstPageAsync() {
+        
+        print("\n============ Fetching first page using the ASYNC API ============")
+        
+        let startTime = NSDate()
+        
+        let query = BackendlessDataQuery()
+        backendless.persistenceService.of(nightclub_details.ofClass()).find(
+            query,
+            response: { ( nightclubs : BackendlessCollection!) -> () in
+                let currentPage = nightclubs.getCurrentPage()
+                print("Loaded \(currentPage.count) restaurant objects")
+                print("Total restaurants in the Backendless starage - \(nightclubs.totalObjects)")
+                
+                for nightclub in currentPage as! [nightclub_details] {
+                    print("Restaurant name = \(nightclub.name)")
+                }
+                
+                print("Total time (ms) - \(1000*NSDate().timeIntervalSinceDate(startTime))")
+            },
+            error: { ( fault : Fault!) -> () in
+                print("Server reported an error: \(fault)")
+            }
+        )
+    }
 
 }
 
