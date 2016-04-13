@@ -63,6 +63,9 @@ class SearchResults: UITableViewController{
                 
                 for nightclub in currentPage as! [nightclub_details] {
                     print("Nightclub name = \(nightclub.name)")
+                    //set up of expensive array
+                    //
+                    self.resultArray[1] = "\(nightclub.name)"
                 }
                 
                 print("Total time (ms) - \(1000*NSDate().timeIntervalSinceDate(startTime))")
