@@ -22,9 +22,7 @@ class SearchResults: UITableViewController{
         //uses globally declared constants APP_ID, SECRET_KEY, & VERSION_NUM
         //Note: refactor line for improved object oriented methodologies
         backendless.initApp(APP_ID, secret:SECRET_KEY, version:VERSION_NUM)
-        
-        
-        
+        fetchingFirstPageAsync()
         
         
         
@@ -36,9 +34,9 @@ class SearchResults: UITableViewController{
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as UITableViewCell!
+        let cell = tableView.dequeueReusableCellWithIdentifier("ResultsTVCell") as UITableViewCell!
         
-        cell.textLabel?.text = "Corbin TERST"
+        cell.textLabel?.text = "Corbin TEST"
         
         return cell
     }
@@ -64,7 +62,7 @@ class SearchResults: UITableViewController{
                 print("Total restaurants in the Backendless starage - \(nightclubs.totalObjects)")
                 
                 for nightclub in currentPage as! [nightclub_details] {
-                    print("Restaurant name = \(nightclub.name)")
+                    print("Nightclub name = \(nightclub.name)")
                 }
                 
                 print("Total time (ms) - \(1000*NSDate().timeIntervalSinceDate(startTime))")
