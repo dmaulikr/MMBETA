@@ -14,7 +14,7 @@ class SearchResults: UITableViewController{
     
     //expensive array, will store search results from backendless collection REST API requests
     //Global declaration for usability in tableView function
-    var resultArray = [String]()
+    var resultArray = [String][""]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,8 +64,10 @@ class SearchResults: UITableViewController{
                 for nightclub in currentPage as! [nightclub_details] {
                     print("Nightclub name = \(nightclub.name)")
                     //set up of expensive array
-                    //
-                    self.resultArray[1] = "\(nightclub.name)"
+                    //gonna include th
+                    //for index in 0...17 {
+                    self.resultArray[1] = nightclub.name as String!
+                    //}
                 }
                 
                 print("Total time (ms) - \(1000*NSDate().timeIntervalSinceDate(startTime))")
