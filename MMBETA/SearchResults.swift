@@ -14,7 +14,11 @@ class SearchResults: UITableViewController{
     
     //expensive array, will store search results from backendless collection REST API requests
     //Global declaration for usability in tableView function
+<<<<<<< HEAD
     var resultArray = [String][""]
+=======
+    var resultArray: [String] = []
+>>>>>>> origin/master
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,12 +68,21 @@ class SearchResults: UITableViewController{
                 for nightclub in currentPage as! [nightclub_details] {
                     print("Nightclub name = \(nightclub.name)")
                     //set up of expensive array
+<<<<<<< HEAD
                     //gonna include th
                     //for index in 0...17 {
                     self.resultArray[1] = nightclub.name as String!
                     //}
+=======
+                    //used a for-in loop, interatively supposed to go through
+                    //need to figure out how to add names to the array
+                    for result in self.resultArray {
+                        self.resultArray.append(nightclub.name!)
+                        //self.resultArray.appendContentsOf(nightclub.name)
+                        print("Name of nightclubs are" + "\(nightclub.name)")
+                    }
+>>>>>>> origin/master
                 }
-                
                 print("Total time (ms) - \(1000*NSDate().timeIntervalSinceDate(startTime))")
             },
             error: { ( fault : Fault!) -> () in
