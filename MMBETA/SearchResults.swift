@@ -15,7 +15,7 @@ class SearchResults: UITableViewController{
     //expensive array, will store search results from backendless collection REST API requests
     //Global declaration for usability in tableView function
 //<<<<<<< HEAD
-    var resultArray = [String][""]
+    //var resultArray = [String][""]
 //=======
     var resultArray: [String] = []
 //>>>>>>> origin/master
