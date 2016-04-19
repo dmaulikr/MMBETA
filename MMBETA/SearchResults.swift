@@ -38,6 +38,8 @@ class SearchResults: UITableViewController{
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        //try "cell" and delete references, and use default built in textLabel
         let cell = tableView.dequeueReusableCellWithIdentifier("ResultsTVCell") as UITableViewCell!
         
         cell.textLabel?.text = "Corbin TEST"
