@@ -10,6 +10,7 @@ import UIKit
 
 class ResultsTVCell: UITableViewCell {
 
+    @IBOutlet weak var labelText: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
