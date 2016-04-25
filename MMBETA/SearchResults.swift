@@ -17,7 +17,7 @@ class SearchResults: UITableViewController{
 //<<<<<<< HEAD
     //var resultArray = [String][""]
 //=======
-    var resultArray: [String] = []
+    var resultArray: [NSObject] = []
 //>>>>>>> origin/master
     
     override func viewDidLoad() {
@@ -51,7 +51,7 @@ class SearchResults: UITableViewController{
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         //will return number of items stored in ResultArray
-        return resultArray.count
+        return 1
     }
 
     func fetchingFirstPageAsync() {
