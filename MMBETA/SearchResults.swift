@@ -17,7 +17,7 @@ class SearchResults: UITableViewController{
 //<<<<<<< HEAD
     //var resultArray = [String][""]
 //=======
-    var resultArray: [NSObject] = []
+    //var resultArray: [NSObject] = []
 //>>>>>>> origin/master
     
     override func viewDidLoad() {
@@ -58,36 +58,21 @@ class SearchResults: UITableViewController{
         
         print("\n============ Fetching first page using the ASYNC API ============")
         
-        let startTime = NSDate()
+        var startTime = NSDate()
         
-        let query = BackendlessDataQuery()
-        backendless.persistenceService.of(nightclub_details.ofClass()).find(
+        var query = BackendlessDataQuery()
+        backendless.persistenceService.of(coffee_details.ofClass()).find(
             query,
-            response: { ( nightclubs : BackendlessCollection!) -> () in
-                let currentPage = nightclubs.getCurrentPage()
+            response: { (restaurants : BackendlessCollection!) -> () in
+                var currentPage = restaurants.getCurrentPage()
                 print("Loaded \(currentPage.count) restaurant objects")
-                print("Total restaurants in the Backendless starage - \(nightclubs.totalObjects)")
+                print("Total restaurants in the Backendless starage - \(restaurants.totalObjects)")
                 
-                for nightclub in currentPage as! [nightclub_details] {
-                    print("Nightclub name = \(nightclub.name)")
-                    //set up of expensive array
-
-                    //gonna include th
-                    //for index in 0...17 {
-                    //self.resultArray[1] = nightclub.name as String!
-                    //}
-
-                    //used a for-in loop, interatively supposed to go through
-                    //need to figure out how to add names to the array
-                    /*
-                    for result in self.resultArray {
-                        self.resultArray.append(nightclub.name!)
-                        //self.resultArray.appendContentsOf(nightclub.name)
-                        print("Name of nightclubs are" + "\(nightclub.name)")
-                    }
- */
-
+                for restaurant in currentPage as! [coffee_details] {
+                    print("Restaurant name = \(restaurant.name)")
+                    
                 }
+                
                 print("Total time (ms) - \(1000*NSDate().timeIntervalSinceDate(startTime))")
             },
             error: { ( fault : Fault!) -> () in
@@ -95,6 +80,7 @@ class SearchResults: UITableViewController{
             }
         )
     }
-
+    
 }
+
 
