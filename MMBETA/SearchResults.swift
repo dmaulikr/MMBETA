@@ -27,7 +27,7 @@ class SearchResults: UITableViewController{
         //Note: refactor line for improved object oriented methodologies
         backendless.initApp(APP_ID, secret:SECRET_KEY, version:VERSION_NUM)
         //Looks like loading objects from backendless is causing the program to crash with memory error
-        //fetchingFirstPageAsync()
+        fetchingFirstPageAsync()
         
         
         tableView.reloadData()
@@ -59,18 +59,21 @@ class SearchResults: UITableViewController{
         
         print("\n============ Fetching first page using the ASYNC API ============")
         
-        var startTime = NSDate()
+        let startTime = NSDate()
         
-        var query = BackendlessDataQuery()
+        let query = BackendlessDataQuery()
         backendless.persistenceService.of(coffee_details.ofClass()).find(
             query,
-            response: { (restaurants : BackendlessCollection!) -> () in
-                var currentPage = restaurants.getCurrentPage()
-                print("Loaded \(currentPage.count) restaurant objects")
-                print("Total restaurants in the Backendless starage - \(restaurants.totalObjects)")
+            response: { (results : BackendlessCollection!) -> () in
+                let currentPage = results.getCurrentPage()
                 
-                for restaurant in currentPage as! [coffee_details] {
-                    print("Restaurant name = \(restaurant.name)")
+
+                print("Loaded \(currentPage.count) restaurant objects")
+                //print("Total restaurants in the Backendless starage - \(restaurants.totalObjects)")
+                
+                for result in currentPage as! [coffee_details] {
+                    
+                    print("Restaurant name = \(result.name)")
                     
                 }
                 
