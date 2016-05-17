@@ -27,10 +27,11 @@ class SearchResults: UITableViewController{
         //Note: refactor line for improved object oriented methodologies
         backendless.initApp(APP_ID, secret:SECRET_KEY, version:VERSION_NUM)
         //Looks like loading objects from backendless is causing the program to crash with memory error
+        
         fetchingFirstPageAsync()
         
         
-        tableView.reloadData()
+        //tableView.reloadData()
         
     }
     
