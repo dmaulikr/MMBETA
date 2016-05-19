@@ -10,6 +10,9 @@ import UIKit
 //trying to create an object within ViewController
 //backendless support suggested
 class LasVegasCoffee_details: NSObject {
+    //not sure if a get/Set is needed here
+    //this may be causing the memory error cause it is recursively
+    //trying to
     var name : String?
     var objectId : String?
     //var telephone : String?
@@ -38,8 +41,8 @@ class SearchResults: UITableViewController{
         //backendless.initApp(APP_ID, secret:SECRET_KEY, version:VERSION_NUM)
         //Looks like loading objects from backendless is causing the program to crash with memory error
         
-        //fetchingFirstPageAsync()
-        fetchingFirstPage()
+        fetchingFirstPageAsync()
+        //fetchingFirstPage()
         
         
         //tableView.reloadData()
@@ -106,20 +109,20 @@ class SearchResults: UITableViewController{
         
         Types.tryblock({ () -> Void in
             
-            let startTime = NSDate()
+            //let startTime = NSDate()
             
             let query = BackendlessDataQuery()
             let restaurants = self.backendless.persistenceService.of(LasVegasCoffee_details.ofClass()).find(query)
             
             let currentPage = restaurants.getCurrentPage()
-            print("Loaded \(currentPage.count) restaurant objects")
-            print("Total restaurants in the Backendless starage - \(restaurants.totalObjects)")
+            //print("Loaded \(currentPage.count) restaurant objects")
+            //print("Total restaurants in the Backendless starage - \(restaurants.totalObjects)")
             
             for restaurant in currentPage as! [LasVegasCoffee_details] {
                 print("Restaurant name = \(restaurant.name)")
             }
             
-            print("Total time (ms) - \(1000*NSDate().timeIntervalSinceDate(startTime))")
+            //print("Total time (ms) - \(1000*NSDate().timeIntervalSinceDate(startTime))")
             },
                        
                        catchblock: { (exception) -> Void in
